@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>herois</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: black;">
+    <h1 style="color: aliceblue;">Herois</h1>
+    <p style="color: aliceblue;">Escolha seu herói!</p>
+    <br>
+    <a href="/" style="color: aliceblue;">Voltar</a>
+    <hr>
+    
+    <p style="color: aliceblue;">
+        {# Este é um comentario em jinja2 #}
+
+        {% if pUniverso == "marvel" %}
+            {% if pHeroi == "miranha" %}
+                O <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/miran.jpg">
+            {% elif pHeroi == "viuva negra" %}
+                A <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/vn.jpg">
+            {% elif pHeroi == "homem de ferro" %}
+                O <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/hf.jpg">
+            {% elif pHeroi == "hulk" %}
+                O <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/hulk.jpg">
+            {% elif pHeroi == "arqueiro" %}
+                O <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/arq.jpg">
+
+            {% else %}
+                heroi não encontrado!
+
+            {% endif %}
+
+        {% elif pUniverso == "dc" %}
+            {% if pHeroi == "lanterna verde" %}
+                O <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/lv.jpg">
+            {% elif pHeroi == "mulher maravilha" %}
+                A <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/ww.jpg">
+            {% elif pHeroi == "super homem" %}
+                O <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/sh.jpg">
+            {% elif pHeroi == "batman" %}
+                O <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/bt.jpg">
+            {% elif pHeroi == "shazam" %}
+                O <B>{{ pHeroi + " é um heroi da " + pUniverso}}</B><br>
+                <img src="img/zm.jpg">
+
+            {% else %}
+                heroi não encontrado!
+
+            {% endif %}
+        {% else %}
+            universo não encontrado!
+        {% endif %}
+
+    </p>
+</body>
+</html>
